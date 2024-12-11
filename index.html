@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小说药方</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">小说药方</h1>
+        <div class="input-section">
+            <p class="prompt">此刻的你，是什么状态？</p>
+            <textarea 
+                id="status-input" 
+                maxlength="20" 
+                placeholder="请输入你的状态..."
+            ></textarea>
+            <p class="word-count">还可输入<span id="remaining">20</span>字</p>
+            <button id="submit-btn">获取药方</button>
+        </div>
+        <div id="result" class="result hidden">
+            <div class="loading hidden">
+                <div class="spinner"></div>
+                <p>正在为你开方...</p>
+            </div>
+            <div class="recommendation hidden">
+                <h2>为你推荐</h2>
+                <div id="recommendation-content"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
